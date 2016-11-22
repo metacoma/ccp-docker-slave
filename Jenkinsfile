@@ -3,6 +3,6 @@ node('baremetal0') {
        checkout scm
    }
    stage('Build docker image') {
-      sh "ls"
+       sh "docker build -t ccp/jenkins-docker-build-slave ."
    }
 }
