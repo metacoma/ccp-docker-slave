@@ -1,7 +1,8 @@
 node {
-  stage "Docker build image"
+  stage("Docker build image") {
   sh """
     pwd; ls;
-    docker build -t ccp/docker-build-image .
+    #docker build -t ccp/docker-build-image .
   """
+  }
 }
