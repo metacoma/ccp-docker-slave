@@ -3,7 +3,7 @@ node('baremetal0') {
        checkout scm
    }
    stage('Build docker image') {
-       sh "docker build -t ccp/jenkins-docker-build-slave ."
+       sh "docker build -t localhost:31500/ccp/jenkins-docker-build-slave ."
    }
    stage('Publish image') {
        sh "docker push localhost:31500/ccp/jenkins-docker-build-slave"
